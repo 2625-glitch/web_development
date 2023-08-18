@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+            <nav>
+                <img src="logop.jpg" class="logo">
+                <ul >
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>CSE Student</p>
+                <h1>I am <span>Poojitha </span>,from India</h1>
+            </div>
+    </div>
+<!---about-->
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="final.jpg" alt="my photi">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Dedicated and Deterministic.Want to rejuvenate my theoritical and
+                practical knowlege by taking part and exploring in
+                internships.<br>Good in Data Structures and Algorithms
+                ,Problem Solving.Enthusiastic to explore new
+                technologies.<br>Observation
+                Decision making
+                Communication
+                Multi-tasking
+                Time Managemen</p>
+                <div class="tab-titles">
+                    <p class="links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="links"  onclick="opentab('experience')">Experience</p>
+                    <p class="links"  onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>C,JAVA,C++</span><br>Programming in c,java,c++</li>
+                        <li><span>Databases</span><br>Mysql,SQLite</li>
+                        <li><span>Tools</span><br>Git,Github and their repos through cli,gui</li>
+                        <li><span>HTML,CSS,JAVASCRIPT</span><br>Creating web appications</li>
+                    
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>TeamLead</span><br>Codeclub RGUKT Basar </li>
+                        <li><span>Internship</span><br>Oasis Infobyte</li>
+                        <li><span>Cordinator</span><br>Techfest Rgukt Basar</li>
+                
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2024</span><br>Btech in Computer Science&Engineering<br>CGPA:9.0 </li>
+                    <li><span>2020</span><br>Intermediate Education<br>CGPA:10</li>
+                    <li><span>2018</span><br>Secondary School of Education<br>CGPA:10</li>
+                
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--servies-->
+<!--<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Sevices</h1>
+        <div class="services-list">
+
+        </div>
+    </div>
+</div>-->
+<!--portfolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work-1.png">
+                <div class="layer">
+                    <h3>GUI Application</h3>
+                    <p>Provides pluggable look and feel,user friendly,helps user to store,retrieve <br>
+                        update the information related to the company</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-2.png">
+                <div class="layer">
+                    <h3>GUI Application</h3>
+                    <p>Provides pluggable look and feel,user friendly,helps user to store,retrieve <br>
+                        update the information related to the company</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-3.png">
+                <div class="layer">
+                    <h3>GUI Application</h3>
+                    <p>Provides pluggable look and feel,user friendly,helps user to store,retrieve <br>
+                        update the information related to the company</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--contact-->
+<div id="contact">
+<div class="container">
+    <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact me</h1>
+            <p><i class="fas fa-paper-plane">contact@example.com</i></p>
+            <p><i class="fas fa-phone-square-alt">0123456789</i></p>
+            <div class="social-icons">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="my-cv.pdf" download class="btn btn2">Download cv</a>
+        </div>
+        <div class="contact-right">
+            <form>
+                <input type="text" name="name" placeholder="yourname" required>
+                <input type="email" name="email" placeholder="youremail" required>
+                <textarea name="message" rows="6" placeholder="yourmessage"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("links");
+     var tabcontents = document.getElementsByClassName("tab-contents");
+     function opentab(tabname)
+     {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+             tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");//will display after the tab title
+         document.getElementById(tabname).classList.add("active-tab");
+     }
+
+
+</script>
+</body>
+</html>
