@@ -6,5 +6,5 @@ One can find the CodeBase of
 3)Calculator using Html, Css, JavaScript 
     which converts celsius to farenheit and vice versa
 
-Create .html, .css , .js file and copy teh codes.
-Open index.html file throught any browser.
+Create .html, .css , .js file and copy the codes.
+Open index.html file through any browser.
